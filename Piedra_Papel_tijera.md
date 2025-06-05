@@ -1,28 +1,16 @@
-PiedraPapelTijera 
-  public static void main(String[] args) 
-    // Arreglo de opciones
-    String[] opciones = {"Piedra", "Papel", "Tijera"}
-    // Puntos clave
-    int jugadorPuntos = 0;
-    int computadoraPuntos = 0;
-    // Selección de la computadora 
-    String computadora = opciones[1]; // Papel
-    // Selección del jugador 
-    String jugador = opciones[0]; // Piedra
-    // Mostrar elecciones
-    System.out.println("Jugador eligió: " + jugador);
-    System.out.println("Computadora eligió: " + computadora);
-    // Lógica del juego
-    if (jugador.equals(computadora)) 
-      System.out.println("Empate");
-    else if ((jugador.equals("Piedra") && computadora.equals("Tijera"))
-               (jugador.equals("Papel") && computadora.equals("Piedra"))
-               (jugador.equals("Tijera") && computadora.equals("Papel")))
-      System.out.println("Gana el jugador");
-      jugadorPuntos++;
-    else 
-      System.out.println("Gana la computadora");
-      computadoraPuntos++;
-    // Mostrar puntuación
-    System.out.println("Puntos del jugador: " + jugadorPuntos);
-    System.out.println("Puntos de la computadora: " + computadoraPuntos);
+main
+  definir opciones como arreglo de texto ["Piedra", "Papel", "Tijera"]
+  definir jugador como opciones[0] // Piedra
+  definir computadora como opciones[1] // Papel
+  mostrar "Jugador eligió: " + jugador
+  mostrar "Computadora eligió: " + computadora
+  si jugador = computadora entonces
+    mostrar "Empate"
+  si no si (jugador = "Piedra" y computadora = "Tijera") o
+           (jugador = "Papel" y computadora = "Piedra") o
+           (jugador = "Tijera" y computadora = "Papel") entonces
+    mostrar "Gana el jugador"
+  si no
+    mostrar "Gana la computadora"
+  fin si
+finmain
