@@ -1,17 +1,3 @@
-main
-
-  definir opciones como arreglo de texto ["Piedra", "Papel", "Tijera"]
-
-  definir jugador como arreglo de texto ["JugadorA", "JugadorB"]
-  
-  definir jugadaPC como texto
-  
-  definir jugada como texto
-
-  definir rondas como entero = 0
-
-  mientras rondas < 3 hacer
-  
     mostrar "Ronda " + (rondas + 1)
     
     mostrar "Elige Piedra, Papel o Tijera:"
@@ -43,7 +29,3 @@ main
     fin si
 
     rondas = rondas + 1
-    
-  fin mientras
-  
-finmain
