@@ -1,0 +1,52 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Enemigo orco = new Enemigo("Orco", 100);
+        EnemigoVolador murcielago = new EnemigoVolador("Murciélago", 50);
+        EnemigoMago brujo = new EnemigoMago("Brujo Oscuro", 70);
+
+        orco.Atacar();        // Orco ataca con un golpe básico.
+        murcielago.Atacar();  // Murciélago lanza un ataque desde el aire.
+        brujo.Atacar();       // Brujo Oscuro lanza una bola de fuego mágica.
+    }
+}
+
+public class Enemigo
+{
+    public string Nombre { get; private set; }
+    public int Vida { get; protected set; }
+
+    public Enemigo(string nombre, int vida)
+    {
+        Nombre = nombre;
+        Vida = vida;
+    }
+
+    public virtual void Atacar()
+    {
+        Console.WriteLine($"{Nombre} ataca con un golpe básico.");
+    }
+}
+
+public class EnemigoVolador : Enemigo
+{
+    public EnemigoVolador(string nombre, int vida) : base(nombre, vida) { }
+
+    public override void Atacar()
+    {
+        Console.WriteLine($"{Nombre} lanza un ataque desde el aire.");
+    }
+}
+
+public class EnemigoMago : Enemigo
+{
+    public EnemigoMago(string nombre, int vida) : base(nombre, vida) { }
+
+    public override void Atacar()
+    {
+        Console.WriteLine($"{Nombre} lanza una bola de fuego mágica.");
+    }
+}
